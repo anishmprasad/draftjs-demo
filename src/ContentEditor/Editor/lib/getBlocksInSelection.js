@@ -1,10 +1,8 @@
 /* @flow */
-import {EditorState} from 'draft-js';
-import {OrderedMap} from 'immutable';
+import { EditorState } from "draft-js";
+import { OrderedMap } from "immutable";
 
-export default function getBlocksInSelection(
-  editorState: EditorState,
-): EditorState {
+export default function getBlocksInSelection(editorState) {
   let contentState = editorState.getCurrentContent();
   let blockMap = contentState.getBlockMap();
   let selection = editorState.getSelection();
@@ -15,7 +13,7 @@ export default function getBlocksInSelection(
   let startKey = selection.getStartKey();
   let endKey = selection.getEndKey();
   if (startKey === endKey) {
-    return new OrderedMap({startKey: contentState.getBlockForKey(startKey)});
+    return new OrderedMap({ startKey: contentState.getBlockForKey(startKey) });
   }
   let blocksUntilEnd = blockMap.takeUntil((block, key) => key === endKey);
   return blocksUntilEnd.skipUntil((block, key) => key === startKey);

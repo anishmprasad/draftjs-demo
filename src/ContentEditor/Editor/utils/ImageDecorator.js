@@ -1,5 +1,5 @@
 /* @flow */
-import ImageSpan from "../ui/ImageSpan";
+import ImageSpan from "../EditorComponents/ImageSpan";
 import { ENTITY_TYPE } from "draft-js-utils";
 
 import { ContentBlock, ContentState } from "draft-js";

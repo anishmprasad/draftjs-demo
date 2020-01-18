@@ -13,10 +13,10 @@ import {
 import { ENTITY_TYPE } from "draft-js-utils";
 import DefaultToolbarConfig from "./EditorToolbarConfig";
 import StyleButton from "./StyleButton";
-import PopoverIconButton from "../ui/PopoverIconButton";
-import ButtonGroup from "../ui/ButtonGroup";
-import Dropdown from "../ui/Dropdown";
-import IconButton from "../ui/IconButton";
+import PopoverIconButton from "../EditorComponents/PopoverIconButton";
+import ButtonGroup from "../EditorComponents/ButtonGroup";
+import Dropdown from "../EditorComponents/Dropdown";
+import IconButton from "../EditorComponents/IconButton";
 import getEntityAtCursor from "./getEntityAtCursor";
 import clearEntityForRange from "./clearEntityForRange";
 import autobind from "class-autobind";

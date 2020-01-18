@@ -9,17 +9,17 @@ import {
   Entity
 } from "draft-js";
 import getDefaultKeyBinding from "draft-js/lib/getDefaultKeyBinding";
-import changeBlockDepth from "./lib/changeBlockDepth";
-import changeBlockType from "./lib/changeBlockType";
-import getBlocksInSelection from "./lib/getBlocksInSelection";
-import insertBlockAfter from "./lib/insertBlockAfter";
-import isListItem from "./lib/isListItem";
+import changeBlockDepth from "./utils/changeBlockDepth";
+import changeBlockType from "./utils/changeBlockType";
+import getBlocksInSelection from "./utils/getBlocksInSelection";
+import insertBlockAfter from "./utils/insertBlockAfter";
+import isListItem from "./utils/isListItem";
 import isSoftNewlineEvent from "draft-js/lib/isSoftNewlineEvent";
-import EditorToolbar from "./lib/EditorToolbar";
-import EditorValue from "./lib/EditorValue";
-import LinkDecorator from "./lib/LinkDecorator";
-import ImageDecorator from "./lib/ImageDecorator";
-import composite from "./lib/composite";
+import EditorToolbar from "./utils/EditorToolbar";
+import EditorValue from "./utils/EditorValue";
+import LinkDecorator from "./utils/LinkDecorator";
+import ImageDecorator from "./utils/ImageDecorator";
+import composite from "./utils/composite";
 import cx from "classnames";
 import autobind from "class-autobind";
 import EventEmitter from "events";
@@ -29,12 +29,12 @@ import "./Draft.global.css";
 import "./RichTextEditor.css";
 
 import { ContentBlock } from "draft-js";
-import { ToolbarConfig, CustomControl } from "./lib/EditorToolbarConfig";
-import { ImportOptions } from "./lib/EditorValue";
+import { ToolbarConfig, CustomControl } from "./utils/EditorToolbarConfig";
+import { ImportOptions } from "./utils/EditorValue";
 
-import ButtonGroup from "./ui/ButtonGroup";
-import Button from "./ui/Button";
-import Dropdown from "./ui/Dropdown";
+import ButtonGroup from "./EditorComponents/ButtonGroup";
+import Button from "./EditorComponents/Button";
+import Dropdown from "./EditorComponents/Dropdown";
 
 const MAX_LIST_DEPTH = 2;
 

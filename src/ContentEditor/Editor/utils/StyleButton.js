@@ -1,6 +1,6 @@
 /* @flow */
 import React, { Component } from "react";
-import IconButton from "../ui/IconButton";
+import IconButton from "../EditorComponents/IconButton";
 import autobind from "class-autobind";
 
 export default class StyleButton extends Component {

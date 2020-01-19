@@ -38,6 +38,9 @@ function App() {
 	const [value, setValue] = useState(Editor.createValueFromString(defaultValue, textType));
 	const [enable, setEnable] = useState(false);
 	function onChange(value) {
+		let editorstate = value.getEditorState();
+		console.log(editorstate.getCurrentContent());
+		console.log(editorstate.getCurrentContent().getPlainText());
 		setValue(value);
 		setEnable(true);
 		// if (onChange) {
@@ -49,7 +52,14 @@ function App() {
 	}
 	return (
 		<div className={`rceditor`}>
-			<Editor toolbar={enable} toolbarOnBottom value={value} onChange={onChange} toolbarClassName='toolbar' />
+			<Editor
+				toolbarConfig={toolbarConfig}
+				toolbar={enable}
+				toolbarOnBottom
+				value={value}
+				onChange={onChange}
+				toolbarClassName='toolbar'
+			/>
 		</div>
 	);
 }

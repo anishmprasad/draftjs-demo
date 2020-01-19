@@ -44,7 +44,12 @@
 	.richtext-editor {
 		border: none;
 		.editor {
+			padding: 9px;
 			&.active {
+				border: 2px solid #009de6;
+				border-radius: 4px;
+				position: relative;
+				padding: 7px;
 				&::before {
 					content: '';
 					width: 14px;
@@ -65,10 +70,6 @@
 					right: -8px;
 					top: calc(50% - 7px);
 				}
-				border: 2px solid #009de6;
-				border-radius: 4px;
-				position: relative;
-				padding: 7px;
 			}
 		}
 		.onBottom {

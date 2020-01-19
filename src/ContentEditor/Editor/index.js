@@ -71,6 +71,7 @@ export default class RichTextEditor extends Component {
 			placeholder,
 			customStyleMap,
 			readOnly,
+			toolbar,
 			disabled,
 			toolbarConfig,
 			toolbarOnBottom,
@@ -90,7 +91,8 @@ export default class RichTextEditor extends Component {
 		let combinedEditorClassName = cx(
 			{
 				editor: true,
-				hidePlaceholder: this._shouldHidePlaceholder()
+				hidePlaceholder: this._shouldHidePlaceholder(),
+				active: toolbar
 			},
 			editorClassName
 		);
@@ -98,7 +100,7 @@ export default class RichTextEditor extends Component {
 			readOnly = disabled;
 		}
 		let editorToolbar;
-		if (!readOnly) {
+		if (!readOnly && toolbar) {
 			editorToolbar = (
 				<EditorToolbar
 					rootStyle={toolbarStyle}

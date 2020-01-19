@@ -45,7 +45,8 @@
 		border: none;
 		.editor {
 			&.active {
-				border: 2px solid skyblue;
+				border: 4px solid #009de6;
+				border-radius: 4px;
 			}
 		}
 		.onBottom {

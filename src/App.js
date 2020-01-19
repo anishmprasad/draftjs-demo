@@ -34,12 +34,12 @@ function App() {
 		]
 	};
 	const [value, setValue] = useState(Editor.createEmptyValue());
-	const [enable, setEnable] = useState(true);
+	const [enable, setEnable] = useState(false);
 	console.log(value);
 	function onChange(value) {
 		console.log('onChange');
 		setValue(value);
-		// setEnable(false);
+		setEnable(true);
 		// if (onChange) {
 		//   // Send the changes up to the parent component as an HTML string.
 		//   // This is here to demonstrate using `.toString()` but in a real app it
@@ -48,8 +48,8 @@ function App() {
 		// }
 	}
 	return (
-		<div className={`rceditor ${!enable ? 'active' : ''} `}>
-			<Editor readOnly={enable} toolbarOnBottom value={value} onChange={onChange} toolbarClassName='toolbar' />
+		<div className={`rceditor`}>
+			<Editor toolbar={enable} toolbarOnBottom value={value} onChange={onChange} toolbarClassName='toolbar' />
 		</div>
 	);
 }

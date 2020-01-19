@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
-import Editor from './RichTextEditor';
+import Editor from './RichText';
 import './App.scss';
 
-function App() {
-	console.log(Editor.createEmptyValue);
+export default function App() {
 	// The toolbarConfig object allows you to specify custom buttons, reorder buttons and to add custom css classes.
 	// Supported inline styles: https://github.com/facebook/draft-js/blob/master/docs/Advanced-Topics-Inline-Styles.md
 	// Supported block types: https://github.com/facebook/draft-js/blob/master/docs/Advanced-Topics-Custom-Block-Render.md#draft-default-block-render-map
@@ -63,5 +62,3 @@ function App() {
 		</div>
 	);
 }
-
-export default App;

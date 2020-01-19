@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,36 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.rceditor {
+	width: 800px;
+	margin: 0 auto;
+	margin-top: 30px;
+	.richtext-editor {
+		border: none;
+		.editor {
+			&.active {
+				border: 2px solid skyblue;
+			}
+		}
+		.onBottom {
+			display: inline-block;
+			box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+			margin: 0;
+			padding: 10px;
+			border-top: none;
+			.button-group {
+				margin: 0 5px 0 0;
+				.button-wrap {
+					.button {
+						background: none;
+						border: none;
+					}
+				}
+			}
+		}
+	}
+	.toolbar {
+	}
 }

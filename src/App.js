@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
-import Editor from './ContentEditor/Editor';
+import Editor from './RichTextEditor';
 import './App.scss';
 
 function App() {
@@ -33,11 +33,11 @@ function App() {
 			{ label: 'OL', style: 'ordered-list-item' }
 		]
 	};
-	const [value, setValue] = useState(Editor.createEmptyValue());
+	const defaultValue = 'default text';
+	const textType = 'markdown';
+	const [value, setValue] = useState(Editor.createValueFromString(defaultValue, textType));
 	const [enable, setEnable] = useState(false);
-	console.log(value);
 	function onChange(value) {
-		console.log('onChange');
 		setValue(value);
 		setEnable(true);
 		// if (onChange) {

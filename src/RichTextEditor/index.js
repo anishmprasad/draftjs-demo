@@ -19,7 +19,7 @@ import EventEmitter from 'events';
 import { BLOCK_TYPE } from 'draft-js-utils';
 
 import './Draft.global.css';
-import './RichTextEditor.css';
+import './index.scss';
 
 import { ContentBlock } from 'draft-js';
 import { ToolbarConfig, CustomControl } from './utils/EditorToolbarConfig';

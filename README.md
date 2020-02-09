@@ -1,1 +1,4 @@
 # draftjs-demo
+
+# Licence
+MIT
